@@ -7,6 +7,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 
+/*
+Represents the main screens in the app.
+
+used by Navigation to determine which screen should be displayed.
+ */
 enum class Screen {
     HOME,
     PLAY,

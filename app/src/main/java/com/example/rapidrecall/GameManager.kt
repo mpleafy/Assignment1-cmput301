@@ -4,7 +4,19 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+/*
+manages the data for the current and previous game attempts.
 
+Handles creating attempts, storing the target and user's guess,
+checking whether the guess is correct, and recording the guess time.
+It uses AttemptRepository to store and access the attempt data.
+attempts are always instantiated through GameManager,
+and GameManager acts as the access point for all data.
+Functions only ever alter the last item on the list,
+as that will always be the current attempt.
+Once the game has started the user cannot exit and data is filled out sequentially,
+ensuring that this will always be the case.
+ */
 class GameManager(
     private val attemptRepository: AttemptRepository
 ) {
@@ -48,7 +60,6 @@ class GameManager(
     fun getAttempts(): List<Attempt> {
         return attemptRepository.attempts
     }
-
 
 
 }

@@ -36,7 +36,11 @@ fun numberGenerator(sequenceLength: Int): String {
     return target.toString()
 }
 
+/*
+Represents the different stages of the game.
 
+Used to control which part of the gameplay is currently displayed.
+ */
 enum class GameState {
     SETUP,
     START,
